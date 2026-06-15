@@ -22,8 +22,9 @@ document.querySelectorAll(".reveal, .roll").forEach((el) => revealObserver.obser
 
 /* ── 2 · Parallax suave ─────────────────────────────── */
 const parallaxEls = [...document.querySelectorAll("[data-parallax]")];
+const isMobile = window.matchMedia("(max-width: 760px)").matches;
 
-if (!reducedMotion && parallaxEls.length) {
+if (!reducedMotion && !isMobile && parallaxEls.length) {
   let ticking = false;
 
   const updateParallax = () => {

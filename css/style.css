@@ -806,14 +806,52 @@ em { font-style: italic; }
   .hero__card--b strong { font-size: 1rem; }
   .hero__scroll { display: none; }
 
-  .collection__grid { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
+  /* coleção: catálogo compacto de 2 colunas (menos rolagem, cara de loja) */
+  .collection__grid { grid-template-columns: 1fr 1fr; gap: .7rem; max-width: none; }
+  .card__media { aspect-ratio: 1 / 1; }
+  .card__body { padding: .8rem .8rem .9rem; }
+  .card h3 { font-size: .92rem; line-height: 1.25; }
+  .card__desc { font-size: .74rem; margin-top: .25rem; }
+  .card__row { flex-direction: column; align-items: stretch; gap: .55rem; margin-top: .75rem; }
+  .card__price { font-size: .72rem; }
+  .card__price strong { font-size: 1.05rem; }
+  .card__row .btn { width: 100%; justify-content: center; }
+  .card--cta { padding: 1.6rem 1rem; }
+  .collection__note { margin-top: 1.8rem; }
+
+  /* entrada suave no lugar do roll-in giratório (calmo no telefone) */
+  .roll {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .55s var(--ease-out), transform .55s var(--ease-out);
+  }
+  .roll.is-visible,
+  .roll.d-1.is-visible,
+  .roll.d-2.is-visible {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
   .features__grid   { grid-template-columns: 1fr 1fr; gap: .9rem; }
   .feature { padding: 1.5rem .9rem; }
 
   .gallery__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
 
   .editorial__grid > * { grid-column: 1 / -1 !important; }
-  .editorial__photo--tall { aspect-ratio: 4/3; grid-row: auto; }
+  /* mantém a foto da menina em retrato (não corta o laço no alto) */
+  .editorial__photo--tall {
+    aspect-ratio: 3/4;
+    grid-row: auto;
+    max-width: 330px;
+    margin-inline: auto;
+  }
+  .editorial__photo:nth-of-type(2),
+  .editorial__photo:nth-of-type(3) {
+    aspect-ratio: 4/3;
+    max-width: 420px;
+    margin-inline: auto;
+  }
 
   .float-bow { display: none; }
   .float-bow--1, .float-bow--4 { display: block; opacity: .3; }
