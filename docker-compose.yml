@@ -1,0 +1,28 @@
+services:
+  lacosdibia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.lacosdibia.rule=Host(`lacosdibia.ginglass.com.br`)
+      - traefik.http.routers.lacosdibia.entrypoints=web,websecure
+      - traefik.http.routers.lacosdibia.tls=true
+      - traefik.http.routers.lacosdibia.tls.certresolver=mytlschallenge
+      - traefik.http.services.lacosdibia.loadbalancer.server.port=80
+      - traefik.http.middlewares.lacosdibia.headers.SSLRedirect=true
+      - traefik.http.middlewares.lacosdibia.headers.STSSeconds=315360000
+      - traefik.http.middlewares.lacosdibia.headers.browserXSSFilter=true
+      - traefik.http.middlewares.lacosdibia.headers.contentTypeNosniff=true
+      - traefik.http.middlewares.lacosdibia.headers.forceSTSHeader=true
+      - traefik.http.middlewares.lacosdibia.headers.SSLHost=lacosdibia.ginglass.com.br
+      - traefik.http.middlewares.lacosdibia.headers.STSIncludeSubdomains=true
+      - traefik.http.middlewares.lacosdibia.headers.STSPreload=true
+      - traefik.http.routers.lacosdibia.middlewares=lacosdibia@docker
+    networks:
+      - redelocal
+
+networks:
+  redelocal:
+    external: true

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laços di Bia · Laços artesanais feitos com amor para bebês</title>
+  <meta name="description" content="Laços, tiaras, faixinhas e prendedores artesanais para bebês e crianças. Feitos à mão com carinho no Rio de Janeiro. Peças personalizadas com o nome do seu bebê.">
+  <meta name="keywords" content="laços para bebê, laços artesanais, tiaras infantis, faixinhas de bebê, prendedor de chupeta, kit escolar laços">
+  <meta property="og:title" content="Laços di Bia · Laços feitos com amor">
+  <meta property="og:description" content="Laços artesanais para os momentos mais especiais do seu bebê.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎀</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ══════════════ SVG: laço reutilizável ══════════════ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="bow-shape">
+        <path d="M50 32 C 30 8, 4 10, 6 28 C 8 44, 32 44, 50 32 Z" />
+        <path d="M50 32 C 70 8, 96 10, 94 28 C 92 44, 68 44, 50 32 Z" />
+        <path d="M50 32 C 42 46, 36 58, 40 66 C 44 60, 48 50, 50 44 Z" opacity=".85"/>
+        <path d="M50 32 C 58 46, 64 58, 60 66 C 56 60, 52 50, 50 44 Z" opacity=".85"/>
+        <ellipse cx="50" cy="32" rx="9" ry="8" opacity=".95"/>
+      </g>
+    </defs>
+  </svg>
+
+  <!-- ══════════════ PARTÍCULAS (poeira mágica) ══════════════ -->
+  <canvas id="sparkle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#inicio">
+      <svg class="nav__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+      <span>Laços <em>di</em> Bia</span>
+    </a>
+    <nav class="nav__links" aria-label="Navegação principal">
+      <a href="#colecao">Coleção</a>
+      <a href="#encanto">Encanto</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#depoimentos">Mamães</a>
+    </nav>
+    <a class="btn btn--small" href="https://wa.me/5521970299313?text=Oi!%20Vim%20pelo%20site%20da%20La%C3%A7os%20di%20Bia%20e%20quero%20fazer%20um%20pedido%20%F0%9F%8E%80" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.4Z"/></svg>
+      Encomendar
+    </a>
+  </header>
+
+  <main>
+
+  <!-- ══════════════ 1 · HERO ══════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero__glow hero__glow--pink" data-parallax="0.06" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--blue" data-parallax="-0.04" aria-hidden="true"></div>
+
+    <!-- laços flutuantes -->
+    <svg class="float-bow float-bow--1" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+    <svg class="float-bow float-bow--2" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+    <svg class="float-bow float-bow--3" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+    <svg class="float-bow float-bow--4" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="hero__eyebrow reveal">Ateliê artesanal · desde o coração</p>
+        <h1 class="reveal d-1">
+          Laços feitos com <span class="script">amor</span><br>
+          para os momentos mais <em>especiais</em>
+        </h1>
+        <p class="hero__sub reveal d-2">
+          Cada lacinho nasce das mãos da Karla, costurado fita por fita,
+          para coroar a doçura de quem você mais ama.
+        </p>
+        <div class="hero__cta reveal d-3">
+          <a class="btn btn--primary" href="#colecao">
+            Ver Coleção
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 4v14m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="https://www.instagram.com/lacosdibia" target="_blank" rel="noopener">@lacosdibia</a>
+        </div>
+        <div class="hero__trust reveal d-4">
+          <span><strong>2.000+</strong> peças entregues</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span><strong>100%</strong> feito à mão</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>Rio de Janeiro · RJ</span>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal d-2" data-parallax="0.03">
+        <!-- 📷 TROQUE: foto de bebê usando laço (IA ou real) → assets/hero-bebe.jpg -->
+        <figure class="hero__photo img-slot" data-img="assets/hero-bebe.jpg" data-pos="50% 30%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+          <figcaption>Foto do bebê com laço<br><small>assets/hero-bebe.jpg</small></figcaption>
+        </figure>
+        <div class="hero__card hero__card--a">
+          <svg viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+          <p>Personalizado<br><strong>com o nome</strong></p>
+        </div>
+        <div class="hero__card hero__card--b">
+          <p><strong>♥</strong> Mimo de mãe<br>para mãe</p>
+        </div>
+      </div>
+    </div>
+
+    <a class="hero__scroll" href="#colecao" aria-label="Rolar para a coleção">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ══════════════ 2 · COLEÇÃO ══════════════ -->
+  <section class="section collection" id="colecao">
+    <header class="section__head reveal">
+      <p class="section__eyebrow">Nossa coleção</p>
+      <h2>Pequenos <span class="script">tesouros</span> artesanais</h2>
+      <p class="section__sub">Cada peça é feita sob encomenda nas cores e temas que você escolher — as fotos são demonstrações de cada modelo.</p>
+    </header>
+
+    <div class="collection__grid">
+      <article class="card roll roll--left" data-tint="pink">
+        <figure class="card__media img-slot" data-img="assets/laco-boutique-triplo.jpg" data-pos="50% 45%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Boutique Triplo Jardim Encantado</h3>
+          <p class="card__desc">Três camadas com flores e borboletas — em várias cores.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 22,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20o%20Boutique%20Triplo%20Jardim%20Encantado%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--right d-1" data-tint="blue">
+        <figure class="card__media img-slot" data-img="assets/boutique-triplo-perolas.jpg" data-pos="50% 45%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Boutique Triplo com Chuva de Pérolas</h3>
+          <p class="card__desc">Na faixinha ou xuxinha (R$ 20) ou em bico de pato (R$ 22) — cores à sua escolha.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 20,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20o%20Boutique%20Triplo%20com%20Chuva%20de%20P%C3%A9rolas%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--left d-2" data-tint="pink">
+        <figure class="card__media img-slot" data-img="assets/laco-personalizado.jpg" data-pos="50% 45%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Laço Personalizado</h3>
+          <p class="card__desc">Com o nome em letrinhas coloridas, nas cores que você preferir.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 22,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20o%20La%C3%A7o%20Personalizado%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--right" data-tint="blue">
+        <figure class="card__media img-slot" data-img="assets/produto-prendedor.jpg" data-pos="50% 60%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Prendedor de Chupeta Personalizado</h3>
+          <p class="card__desc">Com o nome do bebê, nas cores e pingentes que você escolher.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 20,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20um%20Prendedor%20de%20Chupeta%20personalizado%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--left d-1" data-tint="pink">
+        <figure class="card__media img-slot" data-img="assets/produto-tiara-luxo.jpg" data-pos="50% 45%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Tiara Luxo</h3>
+          <p class="card__desc">Flores, borboletas e pérolas — montada em várias cores e combinações.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 35,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20a%20Tiara%20Luxo%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--right d-2" data-tint="blue">
+        <figure class="card__media img-slot" data-img="assets/laco-cruzado.jpg" data-pos="50% 45%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Laço Cruzado com Ponta</h3>
+          <p class="card__desc">Modelo delicado com pontas soltas — diversas cores de fita.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 16,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20o%20La%C3%A7o%20Cruzado%20com%20Ponta%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--left" data-tint="pink">
+        <figure class="card__media img-slot" data-img="assets/arco-com-laco.jpg" data-pos="50% 30%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Arco com Laço em Pé</h3>
+          <p class="card__desc">Arco confortável com laço em destaque — cores variadas.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 18,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20o%20Arco%20com%20La%C3%A7o%20em%20P%C3%A9%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--right d-1" data-tint="blue">
+        <figure class="card__media img-slot" data-img="assets/produto-kit-escolar.jpg">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Laço Transparente Escolar</h3>
+          <p class="card__desc">Tema escolar com letrinhas e enfeites — vários modelos disponíveis.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 18,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20o%20La%C3%A7o%20Transparente%20Escolar%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--left d-2" data-tint="pink">
+        <figure class="card__media img-slot" data-img="assets/trio-faixinha.jpg" data-pos="50% 55%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Trio na Faixinha RN</h3>
+          <p class="card__desc">Três faixinhas macias para recém-nascido — várias combinações de cores.</p>
+          <div class="card__row">
+            <span class="card__price"><strong>R$ 15,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20o%20Trio%20na%20Faixinha%20RN%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--right" data-tint="blue">
+        <figure class="card__media img-slot" data-img="assets/produto-laco-junino.jpg" data-pos="50% 40%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Laço Xadrez</h3>
+          <p class="card__desc">Estampas xadrez em várias cores e apliques — do arraiá ao dia a dia.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 12,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20o%20La%C3%A7o%20Xadrez%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card roll roll--left d-1" data-tint="pink">
+        <figure class="card__media img-slot" data-img="assets/produto-laco-carnaval.jpg" data-pos="50% 60%">
+          <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        </figure>
+        <div class="card__body">
+          <h3>Laço Tema Carnaval</h3>
+          <p class="card__desc">Cores vibrantes, penas e brilho — várias combinações para a folia.</p>
+          <div class="card__row">
+            <span class="card__price">a partir de <strong>R$ 18,00</strong></span>
+            <a class="btn btn--small btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20o%20La%C3%A7o%20Tema%20Carnaval%20%F0%9F%8E%80" target="_blank" rel="noopener">Comprar</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--cta roll roll--right d-2">
+        <svg class="card--cta__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        <h3>Imaginou um laço diferente?</h3>
+        <p class="card__desc">A Karla cria peças sob encomenda no tema, cor e tamanho que você sonhar.</p>
+        <a class="btn btn--primary" href="https://wa.me/5521970299313?text=Oi!%20Quero%20encomendar%20um%20la%C3%A7o%20personalizado%20%F0%9F%8E%80" target="_blank" rel="noopener">Fazer encomenda</a>
+      </article>
+    </div>
+
+    <p class="collection__note reveal">Aceitamos cartões de crédito, débito e pix · Consulte a taxa de entrega</p>
+  </section>
+
+  <!-- ══════════════ 3 · ENCANTO (editorial) ══════════════ -->
+  <section class="section editorial" id="encanto">
+    <svg class="float-bow float-bow--5" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+
+    <div class="editorial__grid">
+      <!-- 📷 TROQUE: imagens IA de bebês usando os laços -->
+      <figure class="editorial__photo editorial__photo--tall img-slot reveal" data-img="assets/editorial-1.jpg" data-pos="50% 25%" data-parallax="0.05">
+        <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        <figcaption>Bebê com laço rosa<br><small>assets/editorial-1.jpg</small></figcaption>
+      </figure>
+
+      <div class="editorial__text reveal d-1">
+        <p class="section__eyebrow">O encanto</p>
+        <h2>Cada detalhe conta uma <span class="script">história</span></h2>
+        <p>
+          Não é só um laço. É a foto que vai para o porta-retrato, o primeiro
+          aniversário, o ensaio de batizado. É a memória que você vai guardar
+          para sempre — e ela merece ser perfeita.
+        </p>
+        <blockquote>
+          “Costuro cada peça como se fosse para a minha filha.”
+          <cite>— Karla, fundadora do ateliê</cite>
+        </blockquote>
+      </div>
+
+      <figure class="editorial__photo img-slot reveal d-2" data-img="assets/editorial-2.jpg" data-pos="50% 28%" data-parallax="-0.04">
+        <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        <figcaption>Bebê com faixinha<br><small>assets/editorial-2.jpg</small></figcaption>
+      </figure>
+
+      <figure class="editorial__photo img-slot reveal d-3" data-img="assets/editorial-3.jpg" data-parallax="0.03">
+        <svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        <figcaption>Detalhe do laço<br><small>assets/editorial-3.jpg</small></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══════════════ 4 · DIFERENCIAIS ══════════════ -->
+  <section class="section features">
+    <header class="section__head reveal">
+      <p class="section__eyebrow">Por que Laços di Bia?</p>
+      <h2>Carinho em cada <span class="script">ponto</span></h2>
+    </header>
+
+    <div class="features__grid">
+      <div class="feature reveal">
+        <div class="feature__icon" data-tint="pink">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.7-9.5-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.5 12c-2 4.3-9.5 9-9.5 9Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Feito à mão</h3>
+        <p>Nada de produção em série. Cada laço é montado, costurado e finalizado um a um.</p>
+      </div>
+
+      <div class="feature reveal d-1">
+        <div class="feature__icon" data-tint="blue">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.1 4.9L19 9.2l-4 3.4 1.2 5.1L12 15l-4.2 2.7L9 12.6 5 9.2l4.9-.3L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Materiais premium</h3>
+        <p>Fitas gorgurão, pérolas e apliques selecionados que não desbotam nem desfiam.</p>
+      </div>
+
+      <div class="feature reveal d-2">
+        <div class="feature__icon" data-tint="pink">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11a4 4 0 1 1 8 0c0 3-2 4-2 6h-4c0-2-2-3-2-6Zm2 9h4M12 2v2M4.9 4.9l1.4 1.4M19.1 4.9l-1.4 1.4M2 11h2m16 0h2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Conforto do bebê</h3>
+        <p>Faixinhas de meia de seda e acabamentos macios que não machucam nem apertam.</p>
+      </div>
+
+      <div class="feature reveal d-3">
+        <div class="feature__icon" data-tint="blue">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm0 0v7m-3-3 3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Exclusividade</h3>
+        <p>Peças personalizadas com nome e cores escolhidas por você. Igual, só a sua.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ 5 · GALERIA ══════════════ -->
+  <section class="section gallery" id="galeria">
+    <header class="section__head reveal">
+      <p class="section__eyebrow">Galeria</p>
+      <h2>Feitos para <span class="script">encantar</span></h2>
+      <p class="section__sub">Um pouquinho do que sai do ateliê toda semana.</p>
+    </header>
+
+    <div class="gallery__grid">
+      <!-- 📷 TROQUE: 8 fotos reais dos laços + bebês (IA) -->
+      <figure class="gallery__item img-slot reveal"      data-img="assets/galeria-1.jpg" data-pos="50% 22%"><svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg></figure>
+      <figure class="gallery__item img-slot reveal d-1"  data-img="assets/galeria-2.jpg"><svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg></figure>
+      <figure class="gallery__item gallery__item--wide img-slot reveal d-2" data-img="assets/boutique-triplo-perolas.jpg" data-pos="50% 45%"><svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg></figure>
+      <figure class="gallery__item gallery__item--tall img-slot reveal"     data-img="assets/laco-boutique-triplo.jpg" data-pos="50% 40%"><svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg></figure>
+      <figure class="gallery__item img-slot reveal d-1"  data-img="assets/trio-faixinha.jpg" data-pos="50% 55%"><svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg></figure>
+      <figure class="gallery__item img-slot reveal d-2"  data-img="assets/arco-com-laco.jpg" data-pos="50% 30%"><svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg></figure>
+      <figure class="gallery__item gallery__item--wide img-slot reveal d-3" data-img="assets/galeria-7.jpg" data-pos="50% 32%"><svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg></figure>
+      <figure class="gallery__item img-slot reveal"      data-img="assets/laco-cruzado.jpg" data-pos="50% 45%"><svg class="img-slot__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg></figure>
+    </div>
+
+    <div class="gallery__cta reveal">
+      <a class="btn btn--ghost" href="https://www.instagram.com/lacosdibia" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.2"/></svg>
+        Ver mais no Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════ 6 · DEPOIMENTOS ══════════════ -->
+  <section class="section testimonials" id="depoimentos">
+    <header class="section__head reveal">
+      <p class="section__eyebrow">Depoimentos</p>
+      <h2>O que dizem as <span class="script">mamães</span></h2>
+    </header>
+
+    <div class="testimonials__grid">
+      <figure class="testimonial reveal">
+        <blockquote>
+          “Encomendei o kit com o nome da Maria Alice e chorei quando chegou.
+          A delicadeza, o capricho… dá pra sentir o amor em cada detalhe.”
+        </blockquote>
+        <figcaption>
+          <span class="testimonial__avatar" data-tint="pink" aria-hidden="true">M</span>
+          <div><strong>Mariana S.</strong><small>mãe da Maria Alice · 8 meses</small></div>
+        </figcaption>
+      </figure>
+
+      <figure class="testimonial reveal d-1">
+        <blockquote>
+          “As faixinhas são as únicas que não apertam a cabecinha da minha filha.
+          Qualidade impecável, viraram presença em todas as fotos.”
+        </blockquote>
+        <figcaption>
+          <span class="testimonial__avatar" data-tint="blue" aria-hidden="true">C</span>
+          <div><strong>Camila R.</strong><small>mãe da Helena · 5 meses</small></div>
+        </figcaption>
+      </figure>
+
+      <figure class="testimonial reveal d-2">
+        <blockquote>
+          “Já é o terceiro pedido! O laço do batizado ficou perfeito e a Karla
+          ainda entregou antes do prazo. Atendimento de outro mundo.”
+        </blockquote>
+        <figcaption>
+          <span class="testimonial__avatar" data-tint="pink" aria-hidden="true">P</span>
+          <div><strong>Patrícia M.</strong><small>mãe da Laura · 2 anos</small></div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ══════════════ 7 · CTA FINAL ══════════════ -->
+  <section class="cta-final">
+    <svg class="float-bow float-bow--6" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+    <svg class="float-bow float-bow--7" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+
+    <div class="cta-final__inner reveal">
+      <h2>Seu bebê merece esse <span class="script">carinho</span></h2>
+      <p>Fale com a Karla, escolha as cores, o nome — e receba um mimo único em casa.</p>
+      <a class="btn btn--primary btn--big" href="https://wa.me/5521970299313?text=Oi!%20Vim%20pelo%20site%20e%20quero%20encomendar%20um%20la%C3%A7o%20%F0%9F%8E%80" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.4Z"/></svg>
+        Comprar agora
+      </a>
+      <small>Resposta rápida pelo WhatsApp · (21) 97029-9313</small>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <a class="nav__brand" href="#inicio">
+        <svg class="nav__bow" viewBox="0 0 100 70" aria-hidden="true"><use href="#bow-shape"/></svg>
+        <span>Laços <em>di</em> Bia</span>
+      </a>
+      <p class="footer__tag">Artigos artesanais para bebês e crianças · Rio de Janeiro</p>
+      <div class="footer__links">
+        <a href="https://www.instagram.com/lacosdibia" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5521970299313" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:kabmuniz@gmail.com">kabmuniz@gmail.com</a>
+      </div>
+      <small>© 2026 Laços di Bia Ateliê · Feito com <span aria-label="amor">♥</span></small>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
